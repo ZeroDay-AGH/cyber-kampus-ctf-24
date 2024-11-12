@@ -24,3 +24,5 @@ int main() {
     }
 }
 //movcc  -Wf--no-mov-flow source.c -o chall
+// -no-mov-flow musi byc inaczej nie nie dziala w gdb
+//https://github.com/xoreaxeaxeax/movfuscator

@@ -8,7 +8,7 @@ print('};')
 print(f'int x2[{len(encrypted_flag)}] = ', end="{")
 print(', '.join(map(str, xor_values)), end='')
 print('};')
-print(f'int l = {len(xor_values)}, i = 0;')
+print(f'int l = {len(xor_values)}, i = 0, f = 0;')
 print(f'char flag[{len(encrypted_flag)}];')
 
 #movcc  -Wf--no-mov-flow source.c -o chall

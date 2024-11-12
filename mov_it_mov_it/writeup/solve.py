@@ -4,7 +4,7 @@ import pwndbg
 import pwndbg.commands
 import gdb
 file = './chall'
-address = 0x85f613c
+address = 0x85f613c #adres ze stosu z '}'
 values = []
 def print_value(event):
     value = gdb.parse_and_eval(f'*(int *) {address}')
