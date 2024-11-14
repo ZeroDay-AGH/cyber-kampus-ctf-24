@@ -22,7 +22,7 @@ int main() {
     char flag[56];
     //----
     puts("┳┳┓┏┓┓┏  ┳┏┳┓  ┳┳┓┏┓┓┏  ┳┏┳┓  ╻\n┃┃┃┃┃┃┃  ┃ ┃   ┃┃┃┃┃┃┃  ┃ ┃   ┃\n┛ ┗┗┛┗┛  ┻ ┻   ┛ ┗┗┛┗┛  ┻ ┻   •\n\nOH NO ! there is a boulder on the road !\ni need a spell that will help me to move it:");
-    scanf("%56s",flag);
+    read(0, flag, 56);
     while(i < l) {
         char c = x1[i] ^ x2[i];
         if(flag[i] != c) {    
