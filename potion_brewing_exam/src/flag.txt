@@ -1,1 +1,1 @@
-flag{this_is_test_flag}
+zeroday{y0u_ga1n3d_4_lot_0f_pow3r}
