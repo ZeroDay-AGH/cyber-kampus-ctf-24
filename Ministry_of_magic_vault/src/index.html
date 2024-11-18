@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ministry of magic</title>
+    <link href="https://fonts.cdnfonts.com/css/old-london" rel="stylesheet">
+                
+</head>
+<body>
+    <div id="topbar">
+        
+        <h1 id="title">Ministry of magic</h1>
+    </div>
+    <div class="response">
+        <div id="serverReturn">
+
+        </div>
+    </div>
+    <div id="loginform">
+        <input class="loginInput" type="text" id="login" placeholder="Login">
+        <input class="loginInput" type="password" id="password" placeholder="Password">
+        <button id="loginbutton">Log in</button>
+    </div>
+</body>
+<script>
+    document.getElementById("loginbutton").addEventListener("click", function(){
+        const login = document.getElementById("login").value;
+        const password = document.getElementById("password").value;
+        console.log(login, password);
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                console.log(latitude, longitude);
+
+                fetch("http://localhost:3000/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        login: login,
+                        password: password,
+                        latitude: latitude,
+                        longitude: longitude
+                    })
+                })
+                .then(response => {
+                    const root = document.getElementById("serverReturn");
+                    root.innerHTML = "";
+
+                    const h2 = document.createElement("h2");
+
+                    if(response.status === 200){
+                        console.log("Zalogowano");
+                        root.className = "accept";
+                    } else {
+                        console.log("Błąd logowania");
+                        root.className = "denied";               
+                    }
+                    return response.text().then(data => {
+                        h2.textContent = data;
+                        root.appendChild(h2);
+                    });
+                });
+            }, function(error) {
+                console.error("Error getting location:", error);
+            });
+        } else {
+            console.error("Geolocation is not supported by this browser.");
+        }
+    });
+</script>
+<style>
+    body{
+        font-family: 'Old London';
+        /* background-image: url('/feature-image-ministry-of-magic.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: 100% 100%; */
+    }
+    #topbar {
+        background-color: #4e2750;
+        color: white;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-bottom: 3px solid #000;
+    }
+    #title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        line-height: 50px;
+    }
+    .response {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #serverReturn {
+        width: max-content;
+    }
+    #loginform {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loginInput {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 4px;
+        border: 3px solid black;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        padding: 4px;
+    }
+    #loginbutton {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 4px;
+        border: 3px solid black;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #4e2750;
+        color: white;
+        transition: 0.25s;
+    }
+    #loginbutton:hover {
+        background-color: #6e3b7e;
+    }
+    .accept {
+        color: green;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-left: 5px solid green;
+        border-right: 5px solid green;
+    }
+    .denied {
+        color: red;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-left: 5px solid red;
+        border-right: 5px solid red;
+    }
+</style>
+</html>
