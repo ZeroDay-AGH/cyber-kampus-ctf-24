@@ -21,18 +21,17 @@
         <input class="loginInput" type="password" id="password" placeholder="Password">
         <button id="loginbutton">Log in</button>
     </div>
+    <img id="backgound_image" src="./images/bgimage.png" alt="">
 </body>
 <script>
     document.getElementById("loginbutton").addEventListener("click", function(){
         const login = document.getElementById("login").value;
         const password = document.getElementById("password").value;
-        console.log(login, password);
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-                console.log(latitude, longitude);
 
                 fetch("http://localhost:3000/login", {
                     method: "POST",
@@ -53,10 +52,8 @@
                     const h2 = document.createElement("h2");
 
                     if(response.status === 200){
-                        console.log("Zalogowano");
                         root.className = "accept";
                     } else {
-                        console.log("Błąd logowania");
                         root.className = "denied";               
                     }
                     return response.text().then(data => {
@@ -75,10 +72,6 @@
 <style>
     body{
         font-family: 'Old London';
-        /* background-image: url('/feature-image-ministry-of-magic.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-size: 100% 100%; */
     }
     #topbar {
         background-color: #4e2750;
@@ -137,19 +130,28 @@
     #loginbutton:hover {
         background-color: #6e3b7e;
     }
-    .accept {
-        color: green;
+    .accept, .denied {
         padding-left: 25px;
         padding-right: 25px;
+    }
+    .accept {
+        color: green;  
         border-left: 5px solid green;
         border-right: 5px solid green;
     }
     .denied {
         color: red;
-        padding-left: 25px;
-        padding-right: 25px;
         border-left: 5px solid red;
         border-right: 5px solid red;
+    }
+    #backgound_image {
+        position: fixed;
+        top: 120px;
+        left: 35vw;
+        width: 30vw;
+        height: 25vw;
+        z-index: -1;
+        opacity: 0.3;
     }
 </style>
 </html>

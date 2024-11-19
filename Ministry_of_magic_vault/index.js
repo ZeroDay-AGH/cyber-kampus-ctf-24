@@ -22,26 +22,22 @@ app.get('/passes.txt', (req, res) => {
     res.send('In case you forgot you passes, here they are:\nhpotter@mmin.gov.uk\n3d2QGYu2V8DLo)HhyHmzEQzWaoH');
 });
 
+app.get('/images/:image', (req, res) => {
+    const image = req.params.image;
+    res.sendFile(__dirname + '/src/images/' + image);
+});
+
 app.post('/login', (req, res) => {
     const acceptLanguage = req.get('Accept-Language');
-    console.log('Accept-Language:', acceptLanguage);
 
     const userAgent = req.get('User-Agent');
-    console.log('User-Agent:', userAgent);
 
     const body = req.body;
     const login = body.login;
     const password = body.password;
 
-    console.log('Login:', login);
-    console.log('Password: ', password);
-
     const latitude = body.latitude;
     const longitude = body.longitude;
-
-    console.log('Latitude:', latitude);
-    console.log('Longitude:', longitude);
-
     
     if (latitude > 51 && latitude < 52 && longitude < -0.12 && longitude > -0.13) {
         if (userAgent.includes('owl') || userAgent.includes('Owl')) {
@@ -64,7 +60,7 @@ app.post('/login', (req, res) => {
             res.status(403).send('We only accept requests delivered by owls');
         }
     } else {
-        res.status(400).send('We only accept corrspondency in out office in London');
+        res.status(400).send('We only accept correspondence in our headquarters in London'); 
     }
 });
 
