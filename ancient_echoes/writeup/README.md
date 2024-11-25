@@ -1,12 +1,12 @@
 # Ancient Echoes - writeup
 ## Overview
-![](Pasted image 20241125181735.png)
+![](attachments/main.png)
 \
 po otworzeniu pliku w idzie jesteśmy od razu zobaczyć, podatność jaką jest format string vulnerability.\
 
-![](Pasted image 20241125182114.png)
+![](attachments/checksec.png)
 do tego nie ma aslr, więc kod będzie zawsze na takim samym adresie. Relro jest ustawione jako Partial,  więc będziemy w stanie nadpisać got. \
-![](Pasted image 20241125183541.png)
+![](attachments/wild_magic.png)
 \
 możemy też znaleźć, że istnieje nigdzie nie wykorzystywana funkcja wild_magic, która wywołuje system z podaną komendą. 
 ## Exploitacja
