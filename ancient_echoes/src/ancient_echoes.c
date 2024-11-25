@@ -8,7 +8,7 @@ void setup(void) {
   setbuf(stderr, NULL);
 }
 
-void admin_debug(char *command) { system(command); }
+void wild_magic(char *command) { system(command); }
 
 int main() {
   setup();
