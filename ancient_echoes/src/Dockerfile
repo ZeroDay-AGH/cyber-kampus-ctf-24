@@ -12,5 +12,5 @@ RUN chown ctf:ctf /home/ctf/flag.txt && chmod 644 /home/ctf/flag.txt
 WORKDIR /home/ctf
 USER ctf
 
-EXPOSE 13373
-CMD ["socat", "tcp-l:1337,reuseaddr,fork", "EXEC:./ancient_echoes"]
+EXPOSE 13372
+CMD ["socat", "tcp-l:13372,reuseaddr,fork", "EXEC:./ancient_echoes"]
