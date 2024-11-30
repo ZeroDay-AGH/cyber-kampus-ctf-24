@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ministry_of_magic_vault:
+    container_name: ministry_of_magic_vault
+    build:
+      context: ./ministry_of_magic_vault
+    ports:
+      - "30100:3000"
+
+  trust_issues:
+    container_name: trust_issues
+    build:
+      context: ./trust_issues/src
+    ports:
+      - "30200:5000"
