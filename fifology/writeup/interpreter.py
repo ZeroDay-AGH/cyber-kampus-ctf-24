@@ -119,23 +119,23 @@ while instruction < len(code):
     elif mne == 'JMP':
         op,is_reg = parse_reg(line.split(' ')[1])
         if is_reg:
-            instruction = reg[op]
+            instruction = reg[op]-1
         else:
-            instruction = op
+            instruction = op-1
     elif mne == 'JZ':
         op,is_reg = parse_reg(line.split(' ')[1])
         if flag == 0:
             if is_reg:
-                instruction = reg[op]
+                instruction = reg[op]-1
             else:
-                instruction = op
+                instruction = op-1
     elif mne == 'JNZ':
         op,is_reg = parse_reg(line.split(' ')[1])
         if flag != 0:
             if is_reg:
-                instruction = reg[op]
+                instruction = reg[op]-1
             else:
-                instruction = op
+                instruction = op-1
     elif mne == 'SYSCALL': # 0 print, 1 openfile, 2 readfile, 3 close file, 4 input from stdin, 
         if single:
             id = queue.pop(0)
@@ -183,7 +183,7 @@ Hello World (just prints Hello World)
 PUSH 0;PUSH 11;PUSH 72;PUSH 101;PUSH 108;PUSH 108;PUSH 111;PUSH 32;PUSH 119;PUSH 111;PUSH 114;PUSH 108;PUSH 100;SYSCALL;END
 
 Prints numbers in loop
-MOV A 5; CMP A 0;JZ 10;MOV B A;ADD B 47;PUSH 0;PUSH 1;PUSH B;SYSCALL;SUB A 1;JMP 0;END
+MOV A 5; CMP A 0;JZ 11;MOV B A;ADD B 47;PUSH 0;PUSH 1;PUSH B;SYSCALL;SUB A 1;JMP 1;END
 
 Reads filename from user and prints the content of the file
 PUSH 4;PUSH 1;SYSCALL;SYSCALL;PUSH 2;PUSH 0;SYSCALL;SYSCALL;END

@@ -127,6 +127,7 @@ Now you can push a string letter by letter onto queue, pop them one by one and g
 - **Examples**:
   - `JNZ 8` → Jumps to instruction 8 if the `flag` is not `0`.
 
+- **IMPORTANT NOTE**: The instruction number is 0-based, meaning the first instruction is at index 0.
 ---
 
 ### 6. System Calls
