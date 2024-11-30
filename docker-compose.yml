@@ -14,10 +14,3 @@ services:
       context: ./trust_issues/src
     ports:
       - "30200:5000"
-
-  potion_brewing_exam:
-    container_name: potion_brewing_exam
-    build:
-      context: ./potion_brewing_exam/challenge
-    ports:
-      - "30300:13371"
