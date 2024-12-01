@@ -8,7 +8,7 @@
 |   web    |    medium    | [ministry_of_magic_vault](ministry_of_magic_vault/writeup/writeup.md) |                                     N/A                               |
 |   web    |    hard      |                                                                       |                                     N/A                               |
 |   crypto    |    easy   | [cryptic_cauldron](cryptic_cauldron/writeup/writeup.md)               | [cryptic_cauldron](cryptic_cauldron/release/cryptic_cauldron_77dbbed722e4f707952523cac054295e461a6cc8b78b851ca902b771926320ac.zip) |           
-|   crypto    |    medium |                                                                       |                                     N/A                               |
+|   crypto    |    medium | [sorcerers_padding](sorcerers_padding/writeup/writeup.md)             | [sorcerers_padding](sorcerers_padding/release/sorcerers_padding_0a3041ea01f716415f619ecf1d9eca1c3341c71274a1b3522309c70fa36ea4d7.zip) |
 |   crypto    |    hard   |                                                                       |                                     N/A                               |
 |   rev    |    easy      | [fifology](fifology/writeup/writeup.md)                               | [fifology](fifology/release/fifology_4badba43b8b0e6640b574555e097536584b76fbe9196365e2a2f3af899e8ee6b.zip) |
 |   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md)                     | [mov_it_mov_it](mov_it_mov_it/release/mov_it_mov_it_90abdea564b0541d4a85cf413188cb2b165823d3d995020142c6d8c78ec59f59.zip) |
