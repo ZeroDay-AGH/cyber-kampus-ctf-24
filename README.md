@@ -11,7 +11,7 @@
 |   crypto    |    medium |  |
 |   crypto    |    hard   |  |
 |   rev    |    easy      |  |
-|   rev    |    medium    |  |
+|   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md) |
 |   rev    |    hard      |  |
 |   pwn    |    easy      | [potion_brewing_exam](potion_brewing_exam/writeup/README.md) |
 |   pwn    |    medium    |  |
