@@ -1,8 +1,13 @@
 Do faktoryzacji liczby $N$ użyliśmy metody Fermata. Jest to skuteczna technika w przypadku, gdy liczba $N$ jest iloczynem dwóch dużych liczb pierwszych $p$ i $q$, które są do siebie zbliżone. Metoda polega na znalezieniu liczb $a$ i $b$, takich że:
+
 $$ N = a^2 - b^2 $$
+
 bo wtedy:
+
 $$ N = (a-b) \cdot (a+b) = p \cdot q $$
+
 Aby znaleźć takie liczby $a$ i $b$, iteracyjnie zwiększamy $a$ od wartości $\lceil\sqrt{N}\rceil$ i sprawdzamy, czy $a^2 - N$ jest kwadratem liczby całkowitej:
+
 $$  a^2 - N = b^2 $$
 
 ```python
