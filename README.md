@@ -17,7 +17,7 @@
 |   pwn    |    medium    |  |
 |   pwn    |    hard      |  |
 |   forensics  |  easy    | [secret_ingredients](secret_ingredients/writeup/writeup.md) |
-|   forensics  |  medium  |  |
+|   forensics  |  medium  | [types_of_magic](types_of_magic/writeup/solution.md) |
 |   forensics  |  hard    |  |
 |   misc    |    easy     |  |
 |   misc    |    medium   |  |
