@@ -19,6 +19,6 @@
 |   forensics  |  easy    | [secret_ingredients](secret_ingredients/writeup/writeup.md)           | [secret_ingredients](secret_ingredients/release/secret_ingredients_cb9500486053477b035893135b7bbaa69a26559cbc31a1ec0b325cd2c9fabb64.zip) |
 |   forensics  |  medium  | [types_of_magic](types_of_magic/writeup/solution.md)                  | [types_of_magic](types_of_magic/release/types_of_magic_50575ccdba47bb3066f4d403de1a7018a27c2ede5f513aa8996750288f8782ce.zip) |
 |   forensics  |  hard    |                                                                       |                                     N/A                               |
-|   misc    |    easy     |                                                                       |                                     N/A                               |
-|   misc    |    medium   | [we_love_casting_spells](we_love_casting_spells/writeup/writeup.md)   | [we_love_casting_spells](we_love_casting_spells/release/we_love_casting_spells_98e9dcd4e9f320b1c5a906354a79bda20d50a6feb772c200be5d149b9a5e3eb3.zip)|
+|   misc    |    easy     | [magic_book](magic_book/writeup/writeup.md)                           | [magic_book](magic_book/release/magic_book_de5c647e3d66a82a63cd10204cf284d113c73e336094d3684bbf046c4db0a0b4.zip) |
+|   misc    |    medium   | [we_love_casting_spells](we_love_casting_spells/writeup/writeup.md)   | [we_love_casting_spells](we_love_casting_spells/release/we_love_casting_spells_98e9dcd4e9f320b1c5a906354a79bda20d50a6feb772c200be5d149b9a5e3eb3.zip) |
 |   misc    |    hard     |                                                                       |                                     N/A                               |
