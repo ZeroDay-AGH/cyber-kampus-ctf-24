@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "masqr"
+version = "0.1.0"
+description = ""
+authors = ["Miłosz Skaza <m.skaza@codesk.cc>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+qrcode = {extras = ["pil"], version = "^7.4.2"}
+numpy = "^2.1.1"
+pillow = "^10.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
