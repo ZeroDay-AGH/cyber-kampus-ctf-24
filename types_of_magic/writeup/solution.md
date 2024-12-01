@@ -32,4 +32,5 @@ Otrzymujemy plik `flag`. Należy zmienić jego rozszerzenie na `.png` oraz nale�
 - `IDHR -> IHDR`
 - `IDED -> IDAT`
 
+
 Flaga: `zeroday{th3r3_are_m4ny_typ3s_0f_magic}`
