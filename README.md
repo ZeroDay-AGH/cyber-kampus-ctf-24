@@ -12,7 +12,7 @@
 |   crypto    |    hard   |                                                                       |                                     N/A                               |
 |   rev    |    easy      | [fifology](fifology/writeup/writeup.md)                               | [fifology](fifology/release/fifology_4badba43b8b0e6640b574555e097536584b76fbe9196365e2a2f3af899e8ee6b.zip) |
 |   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md)                     | [mov_it_mov_it](mov_it_mov_it/release/mov_it_mov_it_90abdea564b0541d4a85cf413188cb2b165823d3d995020142c6d8c78ec59f59.zip) |
-|   rev    |    hard      |                                                                       |                                     N/A                               |
+|   rev    |    hard      | [in_the_dark](in_the_dark/writeup/writeup.md)                         | [in_the_dark](in_the_dark/release/in_the_dark_0cf99ea4c55248c99a27ccf22fc96a5cfe20b26282fa67ecb601d0d032b28e3f.zip) |
 |   pwn    |    easy      | [potion_brewing_exam](potion_brewing_exam/writeup/README.md)          | [potion_brewing_exam](potion_brewing_exam/release/potion_brewing_exam_9fc3e0c9fbc6a2885dbb04a57a408101bfa63c41b5734ddf8817e7e3da980b2d.zip) |  
 |   pwn    |    medium    | [ancient_echoes](ancient_echoes/writeup/writeup.md)                                 | [ancient_echoes](ancient_echoes/release/ancient_echoes_93af5cb94272a1a7db60b18771167822092778063c9a504f523e286b41f9048a.zip) |
 |   pwn    |    hard      | [rune_decoder](rune_decoder/writeup/writeup.md)                                   | [rune_decoder](rune_decoder/release/rune_decoder_a01de2186962005b771450158f96f1c82bb74802daef15d42d875297e9b6f508.zip) |
