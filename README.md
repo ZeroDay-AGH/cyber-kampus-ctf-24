@@ -14,7 +14,7 @@
 |   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md)                     | [mov_it_mov_it](mov_it_mov_it/release/mov_it_mov_it_90abdea564b0541d4a85cf413188cb2b165823d3d995020142c6d8c78ec59f59.zip) |
 |   rev    |    hard      |                                                                       |                                     N/A                               |
 |   pwn    |    easy      | [potion_brewing_exam](potion_brewing_exam/writeup/README.md)          | [potion_brewing_exam](potion_brewing_exam/release/potion_brewing_exam_9fc3e0c9fbc6a2885dbb04a57a408101bfa63c41b5734ddf8817e7e3da980b2d.zip) |  
-|   pwn    |    medium    |                                                                       |                                     N/A                               |
+|   pwn    |    medium    | [ancient_echoes](ancient_echoes/writeup/writeup.md)                                 | [ancient_echoes](ancient_echoes/release/ancient_echoes_93af5cb94272a1a7db60b18771167822092778063c9a504f523e286b41f9048a.zip) |
 |   pwn    |    hard      | [rune_decoder](rune_decoder/writeup/writeup.md)                                   | [rune_decoder](rune_decoder/release/rune_decoder_a01de2186962005b771450158f96f1c82bb74802daef15d42d875297e9b6f508.zip) |
 |   forensics  |  easy    | [secret_ingredients](secret_ingredients/writeup/writeup.md)           | [secret_ingredients](secret_ingredients/release/secret_ingredients_cb9500486053477b035893135b7bbaa69a26559cbc31a1ec0b325cd2c9fabb64.zip) |
 |   forensics  |  medium  | [types_of_magic](types_of_magic/writeup/solution.md)                  | [types_of_magic](types_of_magic/release/types_of_magic_50575ccdba47bb3066f4d403de1a7018a27c2ede5f513aa8996750288f8782ce.zip) |
