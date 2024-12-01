@@ -1,0 +1,12 @@
+Greetings, young wizard! I've heard that you, too, are looking for Gringott's lost treasure! I happen to know a thing or two about it. Deep in the castle's dungeons, there are massive steel gates with three locks - each requiring a different spell to open. I've also heard that these spells may overlap with some found in ancient scrolls. Unfortunately, these scrolls are currently completely illegible - but I'm sure you'll find a way to work around that! Oh, and one more thing. I've heard that there is an acient rule - one rule to rule them all - that can help you with this challenge.
+
+Lock 1:
+$2y$10$J7UZGmLLNPJ19.tGNEe.xePtOOh8uwbH88BQzIsVGFDyuqEQ0yj1q
+
+Lock 2:
+$2y$10$ST9ZPgr/lFymNGQgIawE3uP50oClK5LL/jqBXJFKv2lBPoddPvwLW
+
+Lock 3:
+$2y$10$tlMtjJrewGF5eAqQn.2U2emS0.0s7SQiaVsTEbnet/4GI5QIxCPHu
+
+The flag is zeroday{lock1_lock2_lock3}
