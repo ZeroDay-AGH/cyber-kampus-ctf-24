@@ -7,7 +7,7 @@
 |   web    |    easy      | [trust_issues](trust_issues/writeup.md) |
 |   web    |    medium    | [ministry_of_magic_vault](ministry_of_magic_vault/writeup/writeup.md) |
 |   web    |    hard      |  |
-|   crypto    |    easy   |  |
+|   crypto    |    easy   | [cryptic_cauldron](cryptic_cauldron/writeup/writeup.md) |
 |   crypto    |    medium |  |
 |   crypto    |    hard   |  |
 |   rev    |    easy      |  |
@@ -16,7 +16,7 @@
 |   pwn    |    easy      | [potion_brewing_exam](potion_brewing_exam/writeup/README.md) |
 |   pwn    |    medium    |  |
 |   pwn    |    hard      |  |
-|   forensics  |  easy    |  |
+|   forensics  |  easy    | [secret_ingredients](secret_ingredients/writeup/writeup.md) |
 |   forensics  |  medium  |  |
 |   forensics  |  hard    |  |
 |   misc    |    easy     |  |
