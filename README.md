@@ -9,7 +9,7 @@
 |   web    |    hard      |                                                                       |                                     N/A                               |
 |   crypto    |    easy   | [cryptic_cauldron](cryptic_cauldron/writeup/writeup.md)               | [cryptic_cauldron](cryptic_cauldron/release/cryptic_cauldron_77dbbed722e4f707952523cac054295e461a6cc8b78b851ca902b771926320ac.zip) |           
 |   crypto    |    medium | [sorcerers_padding](sorcerers_padding/writeup/writeup.md)             | [sorcerers_padding](sorcerers_padding/release/sorcerers_padding_0a3041ea01f716415f619ecf1d9eca1c3341c71274a1b3522309c70fa36ea4d7.zip) |
-|   crypto    |    hard   |                                                                       |                                     N/A                               |
+|   crypto    |    hard   | [prime_conjurer](prime_conjurer/writeup/writeup.md)                   | [prime_conjurer](prime_conjurer/release/prime_conjurer_d73b170d944c5b241081aaca168072d5d95c30629030b887022410b662494100.zip) |
 |   rev    |    easy      | [fifology](fifology/writeup/writeup.md)                               | [fifology](fifology/release/fifology_4badba43b8b0e6640b574555e097536584b76fbe9196365e2a2f3af899e8ee6b.zip) |
 |   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md)                     | [mov_it_mov_it](mov_it_mov_it/release/mov_it_mov_it_90abdea564b0541d4a85cf413188cb2b165823d3d995020142c6d8c78ec59f59.zip) |
 |   rev    |    hard      | [in_the_dark](in_the_dark/writeup/writeup.md)                         | [in_the_dark](in_the_dark/release/in_the_dark_0cf99ea4c55248c99a27ccf22fc96a5cfe20b26282fa67ecb601d0d032b28e3f.zip) |
