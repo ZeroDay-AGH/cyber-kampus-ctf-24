@@ -1,0 +1,3 @@
+# In the dark
+
+A lone mage, lost in the abyss of darkness awaits aid. Only a experienced wizard can guide him, perceiving what mortal eyes cannot see...
