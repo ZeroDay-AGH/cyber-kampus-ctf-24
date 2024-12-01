@@ -11,7 +11,7 @@
 |   crypto    |    medium |                                                                       |                                     N/A                               |
 |   crypto    |    hard   |                                                                       |                                     N/A                               |
 |   rev    |    easy      |                                                                       |                                     N/A                               |
-|   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md)                     | [mov_it_mov_it](mov_it_mov_it/release/mov_it_mov_it_90abdea564b0541d4a85cf413188cb2b165823d3d995020142c6d8c78ec59f59.zip)          |
+|   rev    |    medium    | [mov_it_mov_it](mov_it_mov_it/writeup/writeup.md)                     | [mov_it_mov_it](mov_it_mov_it/release/mov_it_mov_it_90abdea564b0541d4a85cf413188cb2b165823d3d995020142c6d8c78ec59f59.zip) |
 |   rev    |    hard      |                                                                       |                                     N/A                               |
 |   pwn    |    easy      | [potion_brewing_exam](potion_brewing_exam/writeup/README.md)          | [potion_brewing_exam](potion_brewing_exam/release/potion_brewing_exam_9fc3e0c9fbc6a2885dbb04a57a408101bfa63c41b5734ddf8817e7e3da980b2d.zip) |  
 |   pwn    |    medium    |                                                                       |                                     N/A                               |
@@ -20,5 +20,5 @@
 |   forensics  |  medium  | [types_of_magic](types_of_magic/writeup/solution.md)                  | [types_of_magic](types_of_magic/release/types_of_magic_50575ccdba47bb3066f4d403de1a7018a27c2ede5f513aa8996750288f8782ce.zip) |
 |   forensics  |  hard    |                                                                       |                                     N/A                               |
 |   misc    |    easy     |                                                                       |                                     N/A                               |
-|   misc    |    medium   |                                                                       |                                     N/A                               |
+|   misc    |    medium   | [we_love_casting_spells](we_love_casting_spells/writeup/writeup.md)   | [we_love_casting_spells](we_love_casting_spells/release/we_love_casting_spells_98e9dcd4e9f320b1c5a906354a79bda20d50a6feb772c200be5d149b9a5e3eb3.zip)|
 |   misc    |    hard     |                                                                       |                                     N/A                               |
