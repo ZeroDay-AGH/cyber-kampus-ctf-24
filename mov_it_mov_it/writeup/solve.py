@@ -1,6 +1,6 @@
-#use:
-#gdb -x solve.py
-#podac jako flage cokolwiek
+# use:
+# gdb -x solve.py
+# podac jako flage cokolwiek
 import pwndbg
 import pwndbg.commands
 import gdb
