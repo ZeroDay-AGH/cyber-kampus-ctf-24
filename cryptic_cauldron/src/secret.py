@@ -1,0 +1,1 @@
+FLAG = b"zeroday{f4ct0r_th3_4rc4n3}"
