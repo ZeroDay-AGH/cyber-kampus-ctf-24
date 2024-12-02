@@ -1,0 +1,1 @@
+A mystical book holds a secret that cannot be unveiled at first glance. Its spells are missing key fragments, and a melody seems to guide you into the unknown. Do you have the courage to delve deeper and uncover what lies beyond the visible?
