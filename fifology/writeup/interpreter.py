@@ -1,4 +1,3 @@
-#python3 interpreter.py --file program.fo
 import argparse
 def parse_reg(input):
     if input == 'A':
@@ -8,10 +7,14 @@ def parse_reg(input):
     if input == 'C':
         return 2, True
     return int(input), False
-#--file
+debug = False
 parser = argparse.ArgumentParser()
 parser.add_argument('--file', help='file to interpret')
+parser.add_argument('--debug', help='debug mode', action='store_true')
 args = parser.parse_args()
+#if --debug is present
+if args.debug:
+    debug = True
 if args.file:
     with open(args.file,'r') as f:
         code = f.read()
@@ -24,7 +27,6 @@ reg = [0]*3 #A B C
 flag = 0 #zero flag
 fd = None #file descriptor
 instruction = 0
-print(code)
 debug_outputs =[]
 while instruction < len(code):
     line  = code[instruction].strip()
@@ -34,7 +36,8 @@ while instruction < len(code):
         single = True
     else:
         mne = line.split(' ')[0]
-    print('queue: ',queue[:3],'...',queue[:3],'reg',reg,'flag', flag, 'i', instruction, code[instruction])
+    if debug:
+        print('queue: ',queue[:3],'...',queue[:3],'reg',reg,'flag', flag, 'i', instruction, code[instruction])
     if mne == 'PUSH':
         op,is_reg = parse_reg(line.split(' ')[1])
         if is_reg:
@@ -171,9 +174,10 @@ while instruction < len(code):
 
     elif mne == 'END':
         print('Exited Successfully')
-        print(queue)
-        print(reg)
-        print('all outputs:\n-----------------------------------\n','\n'.join(debug_outputs))
+        if debug:
+            print(queue)
+            print(reg)
+            print('all outputs:\n-----------------------------------\n','\n'.join(debug_outputs))
         break
     instruction += 1
 
