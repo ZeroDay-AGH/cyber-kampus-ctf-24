@@ -5,7 +5,7 @@
 | Category |  Difficulty  |     Author    |                              Writeup                                  |                                   Release                             |
 | -------- | ------------ | ------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | 
 |   web    |    easy      |    qualorm    | [trust_issues](trust_issues/writeup.md)                               |                                     N/A                               |
-|   web    |    medium    |    Author     | [ministry_of_magic_vault](ministry_of_magic_vault/writeup/writeup.md) |                                     N/A                               |
+|   web    |    medium    |    jbktn      | [ministry_of_magic_vault](ministry_of_magic_vault/writeup/writeup.md) |                                     N/A                               |
 |   web    |    hard      |    cpt        | [archmages_secret](archmages_secret/writeup/README.md)                | [archmages_secret](archmages_secret/release/archmages_secret_743bc8f463c336a9d23c6cbd5e27e94166cbd95346f9ec962da0450093bb70ee.zip) |
 |   crypto    |    easy   |    qualorm    | [cryptic_cauldron](cryptic_cauldron/writeup/writeup.md)               | [cryptic_cauldron](cryptic_cauldron/release/cryptic_cauldron_77dbbed722e4f707952523cac054295e461a6cc8b78b851ca902b771926320ac.zip) |           
 |   crypto    |    medium |    qualorm    | [sorcerers_padding](sorcerers_padding/writeup/writeup.md)             | [sorcerers_padding](sorcerers_padding/release/sorcerers_padding_0a3041ea01f716415f619ecf1d9eca1c3341c71274a1b3522309c70fa36ea4d7.zip) |
