@@ -23,12 +23,34 @@
     <script>
         document.getElementById('registerForm').addEventListener('submit', function(event) {
             event.preventDefault();
+    
             const formData = new FormData(this);
-            const jsonData = {};
-            formData.forEach((value, key) => {
-                jsonData[key] = value;
-            });
-
+            const username = formData.get('username').trim();
+            const password = formData.get('password').trim();
+            const errorMessage = document.getElementById('error-message');
+    
+            if (!username || username.length < 6 || !/^[A-Za-z0-9_]+$/.test(username)) {
+                errorMessage.textContent = 'Invalid username. It must be at least 6 characters and contain only letters, numbers, and underscores.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+    
+            if (!password || password.length < 6) {
+                errorMessage.textContent = 'Invalid password. It must be at least 6 characters long.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+    
+            if (username === password) {
+                errorMessage.textContent = 'Username and password cannot be the same.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+    
+            errorMessage.style.display = 'none';
+    
+            const jsonData = { username, password };
+    
             fetch('/auth/register', {
                 method: 'POST',
                 headers: {
@@ -46,11 +68,10 @@
                 }
             })
             .catch(error => {
-                const errorMessage = document.getElementById('error-message');
                 errorMessage.textContent = error.message;
                 errorMessage.style.display = 'block';
             });
         });
-    </script>
+    </script>    
 </body>
 </html>
