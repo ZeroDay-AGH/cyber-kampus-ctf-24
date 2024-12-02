@@ -1,0 +1,1 @@
+A potion brewed by an arcane alchemist contains hidden truths that only the cunning can extract. The bottle’s seal is fortified with a cryptographic lock that, when cracked, reveals hidden extensions to the formula. Can you unlock the secret potion and reveal its full recipe?

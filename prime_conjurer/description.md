@@ -1,0 +1,1 @@
+Deep within the forbidden library lies a tome of numbers that defy the laws of magic and mathematics. These numbers, are said to trick even the most powerful wizards. Only those who unravel their true nature can break the curse and harness their hidden power. Will you rise to the challenge and uncover the truth?
