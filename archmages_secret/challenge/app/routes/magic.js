@@ -66,7 +66,7 @@ module.exports = (app) => {
         return res.status(403).json({ error: 'You\'re not allowed to access this sacred knowledge' });
     }
     axios.post('http://bot:3000/', qs.stringify({
-        url: `http://app:3000/${magician}/spells`
+        url: `http://archmage_app:3000/${magician}/spells`
     }))
     .then(response => {
         res.status(200).json({ message: 'Spell shared successfully', data: response.data });

@@ -10,6 +10,19 @@ module.exports = (app) => {
       if (!username || !/^[A-Za-z0-9_]+$/.test(username)) {
         return res.status(400).json({ error: 'Invalid username. It must be non-empty and contain only letters, numbers, and underscores.' });
       }
+
+      if (!password || password.length < 6) {
+        return res.status(400).json({
+          error: 'Password must be at least 6 characters long.'
+        });
+      }
+
+      if (username === password) {
+        return res.status(400).json({
+          error: 'Username and password cannot be the same.',
+        });
+      }
+      
       const hash = await bcrypt.hash(password, 10);
 
       addUser(username, hash, (err, result) => {
