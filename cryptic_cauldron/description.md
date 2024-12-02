@@ -1,0 +1,1 @@
+A legendary wizard has hidden the secret to an ancient treasure using powerful enchantments. But beware, the cryptic scrolls are sealed with numbers so vast that only the most skilled decipherers can break through. Crack the spell, and the treasure will be yours.
