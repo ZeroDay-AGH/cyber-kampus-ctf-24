@@ -1,40 +1,112 @@
-## Wprowadzenie
+we can seperate the code into parts:
+```ASM
+PUSH 0;
+PUSH 6;
+PUSH 102;
+PUSH 108;
+PUSH 97;
+PUSH 103;
+PUSH 58;
+PUSH 32;
+SYSCALL;
+```
+prints `flag: `
+```ASM
+PUSH 244;
+PUSH 100;
+PUSH 224;
+PUSH 108;
+PUSH 192;
+PUSH 92;
+PUSH 230;
+PUSH 116;
+PUSH 202;
+PUSH 43;
+PUSH 210;
+PUSH 105;
+PUSH 178;
+PUSH 101;
+PUSH 162;
+PUSH 13;
+PUSH 37;
+PUSH 78;
+PUSH 182;
+PUSH 78;
+PUSH 166;
+PUSH 84;
+PUSH 154;
+PUSH 72;
+PUSH 168;
+PUSH 72;
+PUSH 168;
+PUSH 76;
+PUSH 178;
+PUSH 68;
+PUSH 146;
+PUSH 70;
+PUSH 166;
+PUSH 92;
+PUSH 0;
+PUSH 34;
+``` 
+this part of the code is a flag chars before decryption.
+```ASM
+MOV A 0;  // index
+POP B;    // take the flag char into B
+CMP B 13; // if flag char == 13...
+JNZ 50;
+MOV B 33; // ...replace it with 33
+CMP B 37; // if flag char == 37...
+JNZ 53;   
+MOV B 172; // ...replace it with 172
+MOV C A;  // C = index
+CMP C 0;  // (loop2 start)if index == 0
+JZ 60;   //go to DIV B 2
+CMP C 1; // if index == 1
+JZ 61;  //go to ADD B A
+SUB C 2; // index -= 2
+JMP 54; //loop2
+DIV B 2; //happens if index == 0
+ADD B A; // index is added to flag char
+PUSH B; // add the flag char to the stack
+CMP A 33; // if index == 33
+JZ 67;    //break
+ADD A 1;
+JMP 46;
+SYSCALL; //print flag
+END 
+```
+this is loop that iterates over the len of flag (34) and adds index of char to the char itself.
+then if index is divisible by 2, it divides the char by 2.
 
-Celem tego wyzwania jest zrozumienie działania oraz stworzenie interpretera, który wykonuje proste programy zapisane w specjalnym języku skryptowym. Interpreter obsługuje instrukcje takie jak `PUSH`, `POP`, `MOV`, `ADD`, `SUB`, a także bardziej złożone operacje, jak odczyt pliku czy drukowanie danych. Dodatkowo, interpreter posiada mechanizmy sterujące przepływem programu, takie jak `JMP`, `JZ`, i `JNZ`.
+solve script:
+```python
+n = [244,100,224,108,192,92,230,116,202,43,210,105,178,101,162,13,37,78,182,78,166,84,154,72,168,72,168,76,178,68,146,70,166,92]
+n[n.index(13)] = 33
+n[n.index(37)] = 172
+flag = [ chr((n[i]//2)+i) if i%2==0 else chr(n[i]+i) for i in range(len(n))]
+print(''.join(flag))
+```
 
-## Opis programu
+output:
+```
+zeroday{m4ster_0f_magic_languages}
+```
 
-Interpreter interpretuje programy z plików lub z wejścia standardowego. Główne elementy programu to:
-- **Rejestry**: `A`, `B`, `C` (trzy rejestry, które mogą przechowywać liczby).
-- **Kolejka**: przechowuje dane w trakcie wykonywania programu.
-- **Flaga**: zmienia stan na podstawie porównania dwóch wartości.
+also i wrote interpreter for FIFO-ASM, you can run your challenge with it :)
 
-## Instrukcje
+you can find it as [interpreter.py](/fifology/writeup/interpreter.py) run with:
+```
+python3 interpreter.py --file program.fo
+```
 
-### Przykłady programów
+or
 
-1. **Hello World**
-    ```plaintext
-    PUSH 0;PUSH 11;PUSH 72;PUSH 101;PUSH 108;PUSH 108;PUSH 111;PUSH 32;PUSH 119;PUSH 111;PUSH 114;PUSH 108;PUSH 100;SYSCALL;END
-    ```
-    Ten program wypisuje "Hello World" na standardowe wyjście.
-
-2. **Wypisuje liczby w pętli**
-    ```plaintext
-    MOV A 5; CMP A 0; JZ 11; MOV B A; ADD B 47; PUSH 0; PUSH 1; PUSH B; SYSCALL; SUB A 1; JMP 1; END
-    ```
-    Program wykonuje pętlę, która wypisuje liczby od 5 do 0.
-
-3. **Odczytuje nazwę pliku od użytkownika i wypisuje jego zawartość**
-    ```plaintext
-    PUSH 4; PUSH 1; SYSCALL; SYSCALL; PUSH 2; PUSH 0; SYSCALL; SYSCALL; END
-    ```
-    Program używa systemowego wywołania do odczytu zawartości pliku i wypisania jej na ekran.
-
-### Rozwiązanie
+```
+python3 interpreter.py --debug --file program.fo
+```
 
 ```python
-#python3 interpreter.py --file program.fo
 import argparse
 def parse_reg(input):
     if input == 'A':
@@ -44,10 +116,14 @@ def parse_reg(input):
     if input == 'C':
         return 2, True
     return int(input), False
-#--file
+debug = False
 parser = argparse.ArgumentParser()
 parser.add_argument('--file', help='file to interpret')
+parser.add_argument('--debug', help='debug mode', action='store_true')
 args = parser.parse_args()
+#if --debug is present
+if args.debug:
+    debug = True
 if args.file:
     with open(args.file,'r') as f:
         code = f.read()
@@ -60,7 +136,6 @@ reg = [0]*3 #A B C
 flag = 0 #zero flag
 fd = None #file descriptor
 instruction = 0
-print(code)
 debug_outputs =[]
 while instruction < len(code):
     line  = code[instruction].strip()
@@ -70,7 +145,8 @@ while instruction < len(code):
         single = True
     else:
         mne = line.split(' ')[0]
-    print('queue: ',queue[:3],'...',queue[:3],'reg',reg,'flag', flag, 'i', instruction, code[instruction])
+    if debug:
+        print('queue: ',queue[:3],'...',queue[:3],'reg',reg,'flag', flag, 'i', instruction, code[instruction])
     if mne == 'PUSH':
         op,is_reg = parse_reg(line.split(' ')[1])
         if is_reg:
@@ -207,9 +283,23 @@ while instruction < len(code):
 
     elif mne == 'END':
         print('Exited Successfully')
-        print(queue)
-        print(reg)
-        print('all outputs:\n-----------------------------------\n','\n'.join(debug_outputs))
+        if debug:
+            print(queue)
+            print(reg)
+            print('all outputs:\n-----------------------------------\n','\n'.join(debug_outputs))
         break
     instruction += 1
+
+        
+'''
+Hello World (just prints Hello World)
+PUSH 0;PUSH 11;PUSH 72;PUSH 101;PUSH 108;PUSH 108;PUSH 111;PUSH 32;PUSH 119;PUSH 111;PUSH 114;PUSH 108;PUSH 100;SYSCALL;END
+
+Prints numbers in loop
+MOV A 5; CMP A 0;JZ 11;MOV B A;ADD B 47;PUSH 0;PUSH 1;PUSH B;SYSCALL;SUB A 1;JMP 1;END
+
+Reads filename from user and prints the content of the file
+PUSH 4;PUSH 1;SYSCALL;SYSCALL;PUSH 2;PUSH 0;SYSCALL;SYSCALL;END
+
+'''
 ```
