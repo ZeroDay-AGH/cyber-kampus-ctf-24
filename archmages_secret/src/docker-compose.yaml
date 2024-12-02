@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  app:
+  archmage_app:
     build:
       context: app
     restart: always
@@ -19,15 +19,13 @@ services:
     restart: always
     environment:
       APPNAME: Admin
-      APPURL: http://app/
-      APPURLREGEX: ^http(|s)://.*$
+      APPURL: http://archmage_app:3000/
+      APPURLREGEX: ^http(|s)://.*$$
       APPFLAG: zeroday{4rchm4g3_1s_4rch41c}
       APPLIMIT: 2
       APPLIMITTIME: 60
       USE_PROXY: 1
       DISPLAY: ${DISPLAY}
-    ports:
-      - "80:3000"
     networks:
       - internal
 

@@ -89,7 +89,7 @@ module.exports = {
         try {
             const page = await context.newPage();
 
-            const loginResponse = await page.request.post('http://app:3000/auth/login', {
+            const loginResponse = await page.request.post('http://archmage_app:3000/auth/login', {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -128,7 +128,7 @@ module.exports = {
             });
 
             // Inspect the spell adding some Archwizard's power
-            const newUrl = `http://app:3000/${magicianName}/?spell=./${spell.incantation}/${CONFIG.APPFLAG}`;
+            const newUrl = `http://archmage_app:3000/${magicianName}/?spell=./${spell.incantation}/${CONFIG.APPFLAG}`;
             await page.goto(newUrl, {
                 waitUntil: 'load',
                 timeout: 10 * 1000
