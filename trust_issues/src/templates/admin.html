@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow mt-10">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Admin Page</h1>
-    <p class="text-gray-700 mb-4">Welcome to the admin panel!</p>
-    <span>zeroday{203b7f8ed191ef4124bceb579948f8afda842f8f}</span>
-    <a href="/logout" class="block mt-4 text-blue-500 hover:underline">Logout</a>
+<div class="max-w-xl mx-auto bg-white/90 p-6 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold text-pink-800 mb-6">✨ Admin Panel</h1>
+    <p class="text-pink-800 mb-4">Welcome, Keeper of Secrets!</p>
+    <div class="bg-gray-100 p-4 rounded-lg shadow-inner text-pink-800 font-mono inline-block">
+        <span>zeroday{203b7f8ed191ef4124bceb579948f8afda842f8f}</span>
+    </div>
+    <a href="/logout" class="block mt-6 text-pink-800 hover:underline">Log out and vanish</a>
 </div>
 {% endblock %}

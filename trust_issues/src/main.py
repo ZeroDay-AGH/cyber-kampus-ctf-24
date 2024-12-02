@@ -34,7 +34,7 @@ def login():
             # session['token'] = token
             resp.set_cookie('token', token)
             return resp
-        return "Invalid credentials!", 401
+        return render_template('error.html',error_message='Invalid credentials!'), 401
     return render_template('login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -57,10 +57,10 @@ def admin():
         payload = jwt.decode(token,options={"verify_signature": False})        
         if payload.get('username') == 'admin':
             return render_template('admin.html', users=users)
-        return "Unauthorized!", 403
+        return render_template('error.html',error_message='Unauthorized!'), 403
     except jwt.DecodeError as e:
         print(e)
-        return "Invalid token!", 403
+        return render_template('error.html',error_message='Invalid token!'), 403
 
 @app.route('/logout')
 def logout():

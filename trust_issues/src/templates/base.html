@@ -4,17 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet">
-    <title>CTF Challenge</title>
+    <title>✨ USOS</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            color: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #4f46e5;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        }
+        main {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            border-radius: 0.75rem;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-white border-gray-200 px-4 py-2.5">
+<body>
+    <nav class="border-gray-200 px-4 py-2.5">
         <div class="container flex justify-between items-center mx-auto">
-            <a href="/" class="text-xl font-semibold text-gray-800">CTF Challenge</a>
+            <a href="/" class="text-xl font-bold tracking-wider">
+                ✨ Unified Sorcery and Oracle System ✨
+            </a>
         </div>
     </nav>
-    <main class="container mx-auto py-10">
+    <main class="container mx-auto py-10 mt-10">
         {% block content %}{% endblock %}
     </main>
+    <footer>
+        <p>Challenge your wits. Embrace the magic. ✨</p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 </html>

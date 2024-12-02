@@ -1,22 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow mt-10">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Login</h1>
+<div class="max-w-md mx-auto bg-white/90 p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-purple-800 mb-6">🔮 Login to Your Journey</h1>
     <form method="POST">
         <div class="mb-4">
-            <label for="username" class="block text-gray-600">Username</label>
-            <input type="text" id="username" name="username" class="w-full border rounded px-3 py-2">
+            <label for="username" class="block text-purple-700 font-medium">Username</label>
+            <input type="text" id="username" name="username" class="w-full text-pink-800 border-purple-300 rounded-lg px-3 py-2 shadow-sm focus:ring-purple-500 focus:border-purple-500">
         </div>
         <div class="mb-4">
-            <label for="password" class="block text-gray-600">Password</label>
-            <input type="password" id="password" name="password" class="w-full border rounded px-3 py-2">
+            <label for="password" class="block text-purple-700 font-medium">Password</label>
+            <input type="password" id="password" name="password" class="w-full text-pink-800 border-purple-300 rounded-lg px-3 py-2 shadow-sm focus:ring-purple-500 focus:border-purple-500">
         </div>
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded">Login</button>
+        <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all">
+            Enter the Realm
+        </button>
     </form>
     <div class="mt-4 text-center">
-        <span class="text-sm text-gray-600">Don't have an account?</span>
-        <a href="/register" class="text-sm text-blue-500 hover:underline">Register here</a>
-        <br>
+        <span class="text-sm text-purple-700">No account yet?</span>
+        <a href="/register" class="text-sm text-pink-800 hover:underline">Sign up and explore</a>
     </div>
 </div>
 {% endblock %}
