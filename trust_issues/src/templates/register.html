@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow mt-10">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Register</h1>
+<div class="max-w-md mx-auto bg-white/90 p-6 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold text-pink-800 mb-6">🪄 Create Your Account</h1>
     <form method="POST">
         <div class="mb-4">
-            <label for="username" class="block text-gray-600">Username</label>
-            <input type="text" id="username" name="username" class="w-full border rounded px-3 py-2">
+            <label for="username" class="block text-pink-800 font-medium">Username</label>
+            <input type="text" id="username" name="username" class="w-full text-pink-800 border-pink-300 rounded-lg px-3 py-2 shadow-sm focus:ring-pink-500 focus:border-pink-500">
         </div>
         <div class="mb-4">
-            <label for="password" class="block text-gray-600">Password</label>
-            <input type="password" id="password" name="password" class="w-full border rounded px-3 py-2">
+            <label for="password" class="block text-pink-800 font-medium">Password</label>
+            <input type="password" id="password" name="password" class="w-full text-pink-800 border-pink-300 rounded-lg px-3 py-2 shadow-sm focus:ring-pink-500 focus:border-pink-500">
         </div>
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded">Register</button>
+        <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-2 px-4 rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all">
+            Join the Magic
+        </button>
     </form>
 </div>
 {% endblock %}
