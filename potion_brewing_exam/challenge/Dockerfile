@@ -1,3 +1,4 @@
+# This is not the setup we use on server, but it should be enough to test exploits locally
 FROM ubuntu:22.04
 
 RUN apt-get update 
@@ -7,7 +8,7 @@ RUN useradd -UM ctf
 
 COPY ./potion_brewing_exam /home/ctf/potion_brewing_exam
 COPY ./flag.txt /home/ctf/flag.txt
-RUN chown ctf:ctf /home/ctf/flag.txt && chmod 644 /home/ctf/flag.txt
+RUN chown root:root /home/ctf/flag.txt && chmod 644 /home/ctf/flag.txt
 
 WORKDIR /home/ctf
 USER ctf
